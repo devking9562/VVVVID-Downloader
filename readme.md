@@ -2,42 +2,42 @@
 
 ---
 
-## NOTA
-Questo progetto non é piú mantenuto, in quanto VVVVID é stato chiuso. Grazie a tutti per il supporto.
+## NOTE
+This project is no longer maintained, as VVVVID has been closed. Thank you all for your support.
 
-## 📚 Descrizione
-**VVVVID Downloader** è una comoda soluzione per scaricare dei contenuti dal noto sito **VVVVID**, tutto ciò di cui necessita è il **link** alla serie/film o ad un singolo episodio, al resto ci penserà lui.
- In particolare, sono distinguibili due casistiche per i link:
-- Link a **singolo episodio**: lo script scaricherà da quell'episodio in poi, solamente gli episodi di quella stagione.
-- Link a **pagina di un film/anime** con lista episodi: lo script scaricherà tutti gli episodi di tutte le stagioni disponibili o il singolo film.
+## 📚 Description
+**VVVVID Downloader** is a convenient solution for downloading content from the well-known **VVVVID** site, all you need is the **link** to the series/film or a single episode, it will do the rest.
+In particular, there are two cases for links:
+- Link to **single episode**: the script will download from that episode onwards, only the episodes of that season.
+- Link to **film/anime page** with episode list: the script will download all episodes of all available seasons or the single film.
 
-Durante lo sviluppo si è scelto di adottare queste convenzioni poiché sono risultate essere quelle più comode per l'uso quotidiano. Il progetto è comunque aperto a soluzioni alternative ed è possibile discuterne aprendo una issue.
+During development, we chose to adopt these conventions because they turned out to be the most convenient for everyday use. The project is however open to alternative solutions and it is possible to discuss them by opening an issue.
 
-## ⚙️ Installazione
+## ⚙️ Installation
 ### Release (Windows)
-Scaricate [l'ultima release](https://github.com/CoffeeStraw/VVVVID-Downloader/releases). Vi ritroverete con un *.zip*, che dovrete scompattare. Per avviare il programma basterà quindi lanciare "VVVVID Downloader.bat".
+Download [the latest release](https://github.com/CoffeeStraw/VVVVID-Downloader/releases). You will end up with a *.zip*, which you will have to unpack. To start the program, simply launch "VVVVID Downloader.bat".
 
 ### Docker
-Per installare ed utilizzare il software tramite **Docker**, basterà lanciare il file ```vvvvvid-downloader.sh```. Esso si occuperà di lanciare il container e monterà la cartella dei *Downloads* come volume esterno.
+To install and use the software via **Docker**, simply launch the file ```vvvvvid-downloader.sh```. It will take care of launching the container and will mount the *Downloads* folder as an external volume.
 
-## 🎮 Utilizzo
-Per poter utilizzare VVVVID Downloader, tutto quello che dovrete fare è porre il link a ciò che desiderate scaricare da VVVVID all'interno del file **downloads_list.txt**, che contiene già degli esempi.
+## 🎮 Usage
+To use VVVVID Downloader, all you have to do is put the link to what you want to download from VVVVID inside the **downloads_list.txt** file, which already contains examples.
 ## ℹ️ Note:
-- Se avete più link, vanno posizionati ognuno su una linea a parte.
-- Le linee che cominciano con **#** saranno ignorate, può tornare utile se volete ignorare temporaneamente qualcosa ad esempio.
-- Per motivi di copyright VVVVID non è disponibile all'estero, per cui è necessario possedere un indirizzo IP italiano.
+- If you have multiple links, each one should be placed on a separate line.
+- Lines starting with **#** will be ignored, it can be useful if you want to temporarily ignore something for example.
+- For copyright reasons VVVVID is not available abroad, so you need to have an Italian IP address.
 
 ## 👨‍💻 Developers - Release Windows
-Per creare l'eseguibile Windows viene utilizzato **pyinstaller**. I passaggi sono i seguenti:
-- Creare un ambiente virtuale con ```venv``` ed attivarlo;
-- Installare i requirements ed installare ```pyinstaller``` con **pip**;
-- Produrre l'eseguibile col comando:
+To create the Windows executable **pyinstaller** is used. The steps are as follows:
+- Create a virtual environment with ```venv``` and activate it;
+- Install the requirements and install ```pyinstaller``` with **pip**;
+- Produce the executable with the command:
 ```sh
 pyinstaller -F main.py
 ```
-- Affiancare all'eseguibile i file ```downloads_list.txt``` e ```VVVVID Downloader.bat```, che potete trovare nelle release vecchie;
-- Spostare l'eseguibile in una nuova cartella denominata ```bin/```;
-- Includere nella cartella ```bin/``` anche l'eseguibile di ```ffmpeg```.
+- Add to the executable the files ```downloads_list.txt``` and ```VVVVID Downloader.bat```, which you can find in old releases;
+- Move the executable to a new folder called ```bin/```;
+- Include in the ```bin/``` folder also the executable of ```ffmpeg```.
 
-## 🧭 Licenza
-Il presente software è distribuito sotto licenza MIT. Si legga il file `LICENSE` per ulteriori informazioni.
+## 🧭 License
+This software is distributed under the MIT license. Read the `LICENSE` file for more information.
